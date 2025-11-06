@@ -60,7 +60,7 @@ Relatório HTML em target/site/jacoco/index.html.
 5. Testes de Mutação
 Avaliam se os testes capturam alterações no código.
 
-Ferramentas sugeridas: PIT (Java) ou mutmut (Python).
+Ferramentas: PIT (Java).
 
 6. Testes Específicos por Tipo
 Mocks/Stubs: isolam dependências externas.
