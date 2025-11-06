@@ -86,21 +86,19 @@ Relatórios gerados com JaCoCo e PIT/mutmut.
 
 ## 🚀 Como Rodar
 
-```bash
 git clone https://github.com/seu-usuario/simulacao-teste-software-cc8550.git
 cd simulacao-teste-software-cc8550
-Configure o banco em src/main/resources/application.properties:
 
+
+## Configure o banco em src/main/resources/application.properties:
 properties
 Copiar código
 spring.datasource.url=jdbc:postgresql://localhost:5432/biblioteca
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
-Compile e execute:
 
-bash
-Copiar código
+## Compile e execute:
 mvn clean install
 mvn spring-boot:run
 Endpoints REST disponíveis:
