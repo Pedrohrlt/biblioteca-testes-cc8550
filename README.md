@@ -30,27 +30,6 @@ Este projeto é um **sistema de biblioteca** que gerencia **Livros**, **Usuário
 
 ---
 
-## 📂 Estrutura do Projeto
-
-src/
-├─ main/
-│ ├─ java/com/example/demo/
-│ │ ├─ controllers/ # Endpoints REST
-│ │ ├─ models/ # Entidades JPA
-│ │ ├─ repositories/ # Repositórios JPA
-│ │ └─ services/ # Regras de negócio
-│ └─ resources/
-│ └─ application.properties
-└─ test/
-└─ java/com/example/demo/
-├─ services/ # Testes unitários e mocks
-└─ controllers/ # Testes funcionais / API
-
-yaml
-Copiar código
-
----
-
 ## 🚀 Como Rodar
 
 1. Clone o repositório:
@@ -137,6 +116,6 @@ Testes de API: status codes, payloads e mensagens de erro.
 
 Relatórios gerados com JaCoCo e PIT/mutmut.
 
-👤 Autor
+## 👤 Autor
 Pedro Leite – Curso: Ciência da Computação
 Disciplina: CC8550 – Simulação e Teste de Software
