@@ -30,41 +30,7 @@ Este projeto é um **sistema de biblioteca** que gerencia **Livros**, **Usuário
 
 ---
 
-## 🚀 Como Rodar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/simulacao-teste-software-cc8550.git
-cd simulacao-teste-software-cc8550
-Configure o banco em src/main/resources/application.properties:
-
-properties
-Copiar código
-spring.datasource.url=jdbc:postgresql://localhost:5432/biblioteca
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
-Compile e execute:
-
-bash
-Copiar código
-mvn clean install
-mvn spring-boot:run
-Endpoints REST disponíveis:
-
-POST /api/livros – Criar livro
-
-GET /api/livros/{id} – Buscar livro por ID
-
-GET /api/livros – Buscar todos os livros
-
-PUT /api/livros/{id} – Atualizar livro
-
-DELETE /api/livros/{id} – Deletar livro
-
-GET /api/livros/autor?autor=NomeAutor – Buscar livros por autor
-
-🧪 Testes
+## 🧪 Testes
 1. Unitários
 Localizados em src/test/java/com/example/demo/services/
 
@@ -103,7 +69,7 @@ Performance/Carga: medem tempo de execução.
 
 OO/Encapsulamento: testam herança, polimorfismo e abstração.
 
-📝 Planejamento Mestre de Testes
+## 📝 Planejamento Mestre de Testes
 Cobertura mínima de 80%.
 
 Testes unitários, funcionais e de integração.
@@ -115,6 +81,44 @@ Testes de exceção: limite de empréstimos, datas inválidas, registros inexist
 Testes de API: status codes, payloads e mensagens de erro.
 
 Relatórios gerados com JaCoCo e PIT/mutmut.
+
+
+
+## 🚀 Como Rodar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/simulacao-teste-software-cc8550.git
+cd simulacao-teste-software-cc8550
+Configure o banco em src/main/resources/application.properties:
+
+properties
+Copiar código
+spring.datasource.url=jdbc:postgresql://localhost:5432/biblioteca
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.jpa.hibernate.ddl-auto=update
+Compile e execute:
+
+bash
+Copiar código
+mvn clean install
+mvn spring-boot:run
+Endpoints REST disponíveis:
+
+POST /api/livros – Criar livro
+
+GET /api/livros/{id} – Buscar livro por ID
+
+GET /api/livros – Buscar todos os livros
+
+PUT /api/livros/{id} – Atualizar livro
+
+DELETE /api/livros/{id} – Deletar livro
+
+GET /api/livros/autor?autor=NomeAutor – Buscar livros por autor
+
+---
 
 ## 👤 Autor
 Pedro Leite – Curso: Ciência da Computação
