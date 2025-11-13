@@ -12,7 +12,8 @@ public class Livro {
 
     private String titulo;
     private String autor;
-    private Int paginas;
+//    private Int paginas;
+    private int paginas;
 
     // Construtores
     public Livro() {}
@@ -21,6 +22,9 @@ public class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.paginas = paginas;
+    }
+
+    public Livro(Object o, String titulo, Object o1, int i) {
     }
 
     // Getters e Setters
