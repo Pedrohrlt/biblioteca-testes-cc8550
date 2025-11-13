@@ -80,7 +80,7 @@ Testes de exceção: limite de empréstimos, datas inválidas, registros inexist
 
 Testes de API: status codes, payloads e mensagens de erro.
 
-Relatórios gerados com JaCoCo e PIT/mutmut.
+Relatórios gerados com JaCoCo e PIT.
 
 
 
