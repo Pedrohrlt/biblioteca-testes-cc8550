@@ -26,7 +26,7 @@ Este projeto é um **sistema de biblioteca** que gerencia **Livros**, **Usuário
 - Maven  
 - JUnit 5, Mockito, Spring Boot Test  
 - JaCoCo (cobertura de testes)  
-- PIT / mutmut (testes de mutação)
+- PIT  (testes de mutação)
 
 ---
 
