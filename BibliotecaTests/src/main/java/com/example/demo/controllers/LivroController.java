@@ -43,9 +43,9 @@ public class LivroController {
         livroService.deletar(id);
         return ResponseEntity.noContent().build();
     }
-
-    @GetMapping("/autor")
-    public ResponseEntity<List<Livro>> buscarPorAutor(@RequestParam String autor) {
-        return ResponseEntity.ok(livroService.buscarPorAutorOrdenado(autor, true));
-    }
+//
+//    @GetMapping("/autor")
+//    public ResponseEntity<List<Livro>> buscarPorAutor(@RequestParam String autor) {
+//        return ResponseEntity.ok(livroService.buscarPorAutorOrdenado(autor, true));
+//    }
 }
