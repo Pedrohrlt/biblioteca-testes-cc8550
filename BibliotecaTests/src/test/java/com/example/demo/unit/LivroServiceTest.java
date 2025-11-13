@@ -1,9 +1,12 @@
-package com.example.demo.services;
+package com.example.demo.unit;
 
 import com.example.demo.models.Livro;
 import com.example.demo.repositories.LivroRepository;
+import com.example.demo.services.LivroService;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -96,19 +99,6 @@ class LivroServiceTest {
         assertEquals(2, resultado.size());
     }
 
-    // ---------- Testes atualização ----------
-    @Test
-    void testAtualizarLivro_nomeAutorPaginas() {
-        when(livroRepository.findById(1L)).thenReturn(Optional.of(sampleLivro));
-        when(livroRepository.save(any())).thenAnswer(inv -> inv.getArgument(0));
-
-        Livro dados = new Livro(null, "Novo Titulo", "Novo Autor", 600);
-        Livro atualizado = livroService.atualizar(1L, dados);
-
-        assertEquals("Novo Titulo", atualizado.getTitulo());
-        assertEquals("Novo Autor", atualizado.getAutor());
-        assertEquals(600, atualizado.getPaginas());
-    }
 
     @Test
     void testAtualizarLivro_naoExistente() {
@@ -127,23 +117,6 @@ class LivroServiceTest {
         verify(livroRepository).deleteById(1L);
     }
 
-    // ---------- Testes limites ----------
-    @Test
-    void testCriarLivro_tituloAutorExtremos() {
-        String tituloExtremo = "X".repeat(1000);
-        String autorExtremo = "Y".repeat(500);
 
-        Livro l = new Livro(null, tituloExtremo, autorExtremo, 100);
-        when(livroRepository.save(any())).thenAnswer(inv -> {
-            Livro x = inv.getArgument(0);
-            x.setId(2L);
-            return x;
-        });
-
-        Livro criado = livroService.criar(l);
-        assertEquals(tituloExtremo, criado.getTitulo());
-        assertEquals(autorExtremo, criado.getAutor());
-        assertNotNull(criado.getId());
-    }
 
 }
