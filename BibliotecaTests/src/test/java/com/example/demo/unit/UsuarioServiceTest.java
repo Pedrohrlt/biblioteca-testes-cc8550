@@ -1,9 +1,13 @@
-package com.example.demo.services;
+package com.example.demo.unit;
 
 import com.example.demo.models.Usuario;
 import com.example.demo.repositories.UsuarioRepository;
+import com.example.demo.services.ResourceNotFoundException;
+import com.example.demo.services.UsuarioService;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
