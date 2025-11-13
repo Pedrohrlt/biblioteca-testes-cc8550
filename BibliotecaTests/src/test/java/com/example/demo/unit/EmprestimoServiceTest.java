@@ -1,4 +1,4 @@
-package com.example.demo.services;
+package com.example.demo.unit;
 
 import com.example.demo.models.Emprestimo;
 import com.example.demo.models.Livro;
@@ -6,7 +6,10 @@ import com.example.demo.models.Usuario;
 import com.example.demo.repositories.EmprestimoRepository;
 import com.example.demo.repositories.LivroRepository;
 import com.example.demo.repositories.UsuarioRepository;
+import com.example.demo.services.AbstractService;
+import com.example.demo.services.EmprestimoService;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -88,6 +91,31 @@ class EmprestimoServiceTest {
     static class TestAbstractService extends AbstractService<String, Long> {
         public String testCheckNotNull(Optional<String> value, String msg) {
             return checkNotNull(value, msg);
+        }
+
+        @Override
+        public String criar(String entity) {
+            return "";
+        }
+
+        @Override
+        public String buscarPorId(Long aLong) {
+            return "";
+        }
+
+        @Override
+        public List<String> buscarTodos() {
+            return List.of();
+        }
+
+        @Override
+        public String atualizar(Long aLong, String entity) {
+            return "";
+        }
+
+        @Override
+        public void deletar(Long aLong) {
+
         }
     }
 
